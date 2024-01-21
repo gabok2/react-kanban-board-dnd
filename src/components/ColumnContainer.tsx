@@ -39,10 +39,10 @@ function ColumnContainer({ tasks, column }: Props) {
       className="
   bg-[#403A64]
 
- rounded-2xl px-4 pb-4 flex-shrink-0
+ rounded-2xl px-4 pb-4 flex-shrink-0 noselect
   "
     >
-      <h1 className="text-white text-base font-bold pt-5 pb-4">
+      <h1 className="text-white text-base font-bold pt-5 pb-4 ">
         {column.title}
       </h1>
       <div
@@ -50,7 +50,7 @@ function ColumnContainer({ tasks, column }: Props) {
           height: height * 0.7,
           minHeight: "50px",
         }}
-        className="flex  flex-col gap-2 mt-2 overflow-x-auto overflow-y-auto"
+        className="flex  flex-col gap-2 mt-2 overflow-x-auto overflow-y-auto noselect"
       >
         <SortableContext items={tasksIds}>
           {tasks.map((task) => (

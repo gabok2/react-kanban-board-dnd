@@ -32,9 +32,9 @@ function TaskCard({ task }: Props) {
       <div
         ref={setNodeRef}
         style={style}
-        className="rounded-lg border border-[#403A64]"
+        className="rounded-lg border border-[#403A64] noselect"
       >
-        <p className="text-[#403A64] text-sm font-normal text-center truncate  pt-2 pb-4 px-4  whitespace-nowrap ">
+        <p className="text-[#403A64] noselect text-sm font-normal text-center truncate  pt-2 pb-4 px-4  whitespace-nowrap ">
           {task.content}
         </p>
       </div>
@@ -47,9 +47,9 @@ function TaskCard({ task }: Props) {
       style={style}
       {...attributes}
       {...listeners}
-      className="rounded-lg bg-[#625A96] "
+      className="rounded-lg bg-[#625A96] noselect "
     >
-      <p className="text-[#D5D6FA] text-sm font-normal text-center truncate  pt-2 pb-4 px-4  whitespace-nowrap ">
+      <p className="text-[#D5D6FA] noselect text-sm font-normal text-center truncate  pt-2 pb-4 px-4  whitespace-nowrap ">
         {task.content}
       </p>
     </div>
