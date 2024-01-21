@@ -5,7 +5,8 @@
 html,
 body,
 #root {
-  @apply text-white box-border;
+  @apply text-white box-border overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
 ::-webkit-scrollbar {
