@@ -1,9 +1,9 @@
 import { SortableContext, useSortable } from "@dnd-kit/sortable";
-import TrashIcon from "../icons/TrashIcon";
-import { Column, Id, Task } from "../types";
+
+import { Column, Task } from "../types";
 import { CSS } from "@dnd-kit/utilities";
-import { useMemo, useState } from "react";
-import PlusIcon from "../icons/PlusIcon";
+import { useMemo } from "react";
+
 import TaskCard from "./TaskCard";
 import useWindowDimensions from "../utils";
 
@@ -13,20 +13,13 @@ interface Props {
 }
 
 function ColumnContainer({ tasks, column }: Props) {
-  const { width, height, isLoaded } = useWindowDimensions();
+  const { width, height } = useWindowDimensions();
 
   const tasksIds = useMemo(() => {
     return tasks.map((task) => task.id);
   }, [tasks]);
 
-  const {
-    setNodeRef,
-    attributes,
-    listeners,
-    transform,
-    transition,
-    isDragging,
-  } = useSortable({
+  const { setNodeRef, transform, transition } = useSortable({
     id: column.id,
     data: {
       type: "Column",

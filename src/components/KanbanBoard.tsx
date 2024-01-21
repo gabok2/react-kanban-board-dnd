@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { Column, Id, Task } from "../types";
+import { useState } from "react";
+import { Column, Task } from "../types";
 import ColumnContainer from "./ColumnContainer";
 import {
   DndContext,
@@ -11,7 +11,6 @@ import {
   useSensors,
   TouchSensor,
   MouseSensor,
-  TouchSensorOptions,
 } from "@dnd-kit/core";
 import { arrayMove } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
